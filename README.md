@@ -93,6 +93,10 @@ File: `index/positional_index.json`
 
 The JSON file contains the complete index generated from the dataset.
 
+GitHub Repository:
+
+https://github.com/hasini-katam/telugu-positional-index
+
 ---
 
 ## 7. Searching and Retrieval
