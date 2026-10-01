@@ -1,0 +1,71 @@
+TELUGU POSITIONAL INVERTED INDEX
+================================
+
+DATASET INFORMATION
+-------------------
+Documents processed: 1736
+Total Telugu words: 318247
+Unique Telugu words: 45968
+
+
+TEST 1: SINGLE WORD SEARCH
+--------------------------
+
+Query:
+తెలుగు
+
+Result:
+Word found.
+Number of documents: 79
+
+Sample documents and positions:
+
+Nagabhushanam Boga\News Article\post_075_తెలుగు బుక్ ఫెయిర్ ఏర్పాటు చేయాలి.txt
+-> [1, 27, 38, 41, 49]
+
+Nagabhushanam Boga\News Article\post_079_ఉత్తమ తెలుగు పుస్తకానికి పురస్కారం.txt
+-> [2, 6, 9, 25]
+
+Nagabhushanam Boga\News Article\post_093_తెలుగు అభిమానుల కోసం ,తెలుగు పాఠకుల కోసం ఒక ప్రత్య.txt
+-> [1, 4]
+
+... remaining matching documents are stored in the index ...
+
+
+TEST 2: SINGLE WORD NOT FOUND
+-----------------------------
+
+Query:
+క్స్జాబ
+
+Result:
+Word not found in the index.
+
+
+TEST 3: PHRASE SEARCH
+---------------------
+
+Query:
+తెలుగు బుక్
+
+Result:
+Phrase found.
+Number of documents: 2
+
+Documents and positions:
+
+Nagabhushanam Boga\News Article\post_075_తెలుగు బుక్ ఫెయిర్ ఏర్పాటు చేయాలి.txt
+-> [2, 42]
+
+Nagabhushanam Boga\News Article\post_079_ఉత్తమ తెలుగు పుస్తకానికి పురస్కారం.txt
+-> [26]
+
+
+TEST 4: PHRASE NOT FOUND
+------------------------
+
+Query:
+తెలుగు తెలుగు
+
+Result:
+Phrase not found.
