@@ -69,3 +69,22 @@ Query:
 
 Result:
 Phrase not found.
+
+
+TEST 5: PROXIMITY SEARCH
+------------------------
+
+Query:
+తెలుగు NEAR/5 బుక్
+
+Result:
+Proximity match found.
+Number of documents: 2
+
+Documents and matching positions:
+
+Nagabhushanam Boga\News Article\post_079_ఉత్తమ తెలుగు పుస్తకానికి పురస్కారం.txt
+-> [(25, 26)]
+
+Nagabhushanam Boga\News Article\post_075_తెలుగు బుక్ ఫెయిర్ ఏర్పాటు చేయాలి.txt
+-> [(1, 2), (38, 42), (41, 42)]

@@ -6,7 +6,7 @@ This project implements a positional inverted index for a Telugu text dataset.
 
 A positional inverted index stores each word along with the documents in which it occurs and the positions where it occurs.
 
-The index is used for searching Telugu words and phrases.
+The index is used for searching Telugu words, phrases, and proximity queries.
 
 ---
 
@@ -101,6 +101,14 @@ https://github.com/hasini-katam/telugu-positional-index
 
 ## 7. Searching and Retrieval
 
+First, check the dataset using `check_dataset.py`.
+
+Run: `python check_dataset.py`
+
+Then create the positional index using `build_index.py`.
+
+Run: `python build_index.py`
+
 The `search.py` program is used for single-word searching.
 
 Run the program using `python search.py` and enter a Telugu word when prompted.
@@ -122,3 +130,17 @@ For example, `తెలుగు` gives the result "Word found" with 79 document
 If a word or phrase is not present, the program displays "Word not found in the index" or "Phrase not found."
 
 The complete sample output is available in `output/sample_output.txt`.
+
+The `proximity_search.py` program is used for proximity searching.
+
+Run:
+
+`python proximity_search.py`
+
+Enter a query in the form `word1 NEAR/k word2`.
+
+Example: `Enter proximity query (word1 NEAR/k word2): తెలుగు NEAR/5 బుక్`
+
+The program finds documents where the two words occur within the given distance.
+
+For example, `తెలుగు NEAR/5 బుక్` found 2 documents in the test.
